@@ -22,26 +22,22 @@
     /* BELANGRIJK: geen fixed 100% height nodig voor mobile */
     html,body{margin:0; padding:0;}
 
-    body{
-      font-family: "Playfair Display", serif;
-      color:var(--text);
-      background:
-        radial-gradient(1200px 600px at 20% -10%, rgba(230,195,106,.25), transparent 60%),
-        radial-gradient(800px 500px at 80% 20%, rgba(179,38,38,.20), transparent 55%),
-        linear-gradient(180deg, var(--bg-dark), var(--bg-green));
-      overflow-x:hidden;
-    }
+  body{
+  margin:0;
+  font-family: "Playfair Display", serif;
+  color:var(--text);
+  background:
+    linear-gradient(180deg, var(--bg-dark), var(--bg-green));
+  overflow-x:hidden;
+}
 
-    /* Wrapper zorgt voor nette centering zonder afsnijden */
     .layout{
-      min-height: 100svh; /* stabieler op mobiel dan vh */
-      display:flex;
-      justify-content:center;
-      align-items:flex-start; /* bovenaan starten voorkomt "afsnijden" */
-      padding: 20px;
-      padding-top: calc(20px + env(safe-area-inset-top));
-      padding-bottom: calc(20px + env(safe-area-inset-bottom));
-    }
+  min-height: 100dvh;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding: 32px 16px 40px;
+}
 
     /* Sneeuw */
     .snow{
@@ -116,11 +112,11 @@
 </head>
 
 <body>
-  <div class="snow" aria-hidden="true"></div>
+  <div class="snow"></div>
 
   <div class="layout">
     <main class="page">
-      <div class="lights" aria-hidden="true"></div>
+      <div class="lights"></div>
 
       <section class="card">
         <p class="poem">Huh, een QR-code, wat kan dit nou betekenen?
@@ -150,8 +146,7 @@ Liefs,
 De Sint en Piet.</p>
 
         <div class="divider"></div>
-      </section>
+ </section>
     </main>
   </div>
 </body>
-</html>
