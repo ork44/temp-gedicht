@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kerstgedicht</title>
+
+  <!-- Kerst-typografie -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg-dark:#0b1f17;
+      --bg-green:#123d2a;
+      --gold:#e6c36a;
+      --red:#b32626;
+      --text:#f7f4ee;
+      --muted:#d8d2c4;
+      --card:rgba(18,61,42,.85);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+
+    body{
+      margin:0;
+      font-family: "Playfair Display", serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(230,195,106,.25), transparent 60%),
+        radial-gradient(800px 500px at 80% 20%, rgba(179,38,38,.20), transparent 55%),
+        linear-gradient(180deg, var(--bg-dark), var(--bg-green));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      overflow-x:hidden;
+    }
+
+    /* Sneeuw */
+    .snow{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,.8) 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 120px 80px, rgba(255,255,255,.6) 50%, transparent 51%),
+        radial-gradient(1px 1px at 200px 140px, rgba(255,255,255,.5) 50%, transparent 51%);
+      background-size: 260px 200px;
+      animation: snow 18s linear infinite;
+    }
+    @keyframes snow{
+      from{transform:translateY(-40px)}
+      to{transform:translateY(40px)}
+    }
+
+    .page{
+      width:min(760px,100%);
+    }
+
+    .lights{
+      height:16px;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          #ff4040 0 12px,
+          #ffd966 12px 24px,
+          #5cff9c 24px 36px,
+          transparent 36px 48px
+        );
+      border-radius:8px;
+      opacity:.9;
+      margin-bottom:14px;
+    }
+
+    .card{
+      background:var(--card);
+      border:2px solid rgba(230,195,106,.35);
+      border-radius:24px;
+      padding:clamp(20px,4vw,40px);
+      box-shadow:0 25px 60px rgba(0,0,0,.45);
+      backdrop-filter:blur(6px);
+    }
+
+    .header{
+      text-align:center;
+      margin-bottom:28px;
+    }
+
+    .header h1{
+      font-family:"Great Vibes", cursive;
+      font-size:clamp(36px,8vw,56px);
+      margin:0;
+      color:var(--gold);
+      text-shadow:0 6px 18px rgba(0,0,0,.45);
+    }
+
+    .header p{
+      margin:8px 0 0;
+      font-size:14px;
+      letter-spacing:.08em;
+      color:var(--muted);
+    }
+
+    .poem{
+      text-align:center;
+      font-size:clamp(15px,3.5vw,18px);
+      line-height:1.8;
+      white-space:pre-wrap;
+      margin:0;
+    }
+
+    .divider{
+      margin:28px auto;
+      height:1px;
+      width:min(420px,100%);
+      background:linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .signature{
+      text-align:center;
+      font-size:16px;
+      color:var(--muted);
+    }
+
+    .signature strong{
+      color:var(--text);
+      font-weight:700;
+    }
+
+    @media (max-width:420px){
+      .lights{margin-bottom:10px}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .snow{animation:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="snow" aria-hidden="true"></div>
+
+  <main class="page">
+    <div class="lights" aria-hidden="true"></div>
+
+    <section class="card">
+
+      <p class="poem">Huh, een QR-code, wat kan dit nou betekenen?
+Nou, de Sint heeft nog iets te verrekenen.
+Misschien een enorm surprise van vorig jaar?
+Die was zo groot en zo zwaar.
+
+Vandaar deze speurtocht.
+Maar gelukkig voor jou heeft een Sint toevallig iets aangekocht.
+De Sint heeft namelijk ook last van een van der Duim kwaal.
+Een online veilig die is voor ons fataal.
+
+De hoeveelheden stromen de pan uit.
+Je wilt er 1, maar 8 worden onderdeel van de buit.
+Daarom als goedmaker voor de teleurstellende inhoud van de grote doos.
+Een paddock stand om je motor te showen aan al je bro’s.
+
+De Sint weet niet of er 1 past.
+Maar dat heb jij zo geprobeerd, zeker en vast.
+Kijk zo maar in de mooiste BMW.
+Daar liggen ze op je te wachten in paren van twee.
+
+En zo is dit gedicht afgerond, het ging werkelijk vliegensvlug
+De grote doos? Die gaat mee terug!
+
+Liefs,
+De Sint en Piet.</p>
+
+      <div class="divider"></div>
+
+    </section>
+  </main>
+</body>
+</html>
